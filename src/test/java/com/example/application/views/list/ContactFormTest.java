@@ -39,8 +39,8 @@ public class ContactFormTest {
         statuses.add(status2);
 
         marcUsher = new Contact();
-        marcUsher.setFirstName("Marc");
-        marcUsher.setLastName("Usher");
+        marcUsher.sethabitName("Marc");
+        marcUsher.sethabitDescription("Usher");
         marcUsher.setEmail("marc@usher.com");
         marcUsher.setStatus(status1);
         marcUsher.setCompany(company2);
@@ -50,8 +50,8 @@ public class ContactFormTest {
     public void formFieldsPopulated() {
         ContactForm form = new ContactForm(companies, statuses);
         form.setContact(marcUsher);
-        assertEquals("Marc", form.firstName.getValue());
-        assertEquals("Usher", form.lastName.getValue());
+        assertEquals("Marc", form.habitName.getValue());
+        assertEquals("Usher", form.habitDescription.getValue());
         assertEquals("marc@usher.com", form.email.getValue());
         assertEquals(company2, form.company.getValue());
         assertEquals(status1, form.status.getValue());
@@ -62,8 +62,8 @@ public class ContactFormTest {
         ContactForm form = new ContactForm(companies, statuses);
         Contact contact = new Contact();
         form.setContact(contact);
-        form.firstName.setValue("John");
-        form.lastName.setValue("Doe");
+        form.habitName.setValue("John");
+        form.habitDescription.setValue("Doe");
         form.company.setValue(company1);
         form.email.setValue("john@doe.com");
         form.status.setValue(status2);
@@ -75,8 +75,8 @@ public class ContactFormTest {
         form.save.click();
         Contact savedContact = savedContactRef.get();
 
-        assertEquals("John", savedContact.getFirstName());
-        assertEquals("Doe", savedContact.getLastName());
+        assertEquals("John", savedContact.gethabitName());
+        assertEquals("Doe", savedContact.gethabitDescription());
         assertEquals("john@doe.com", savedContact.getEmail());
         assertEquals(company1, savedContact.getCompany());
         assertEquals(status2, savedContact.getStatus());

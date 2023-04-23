@@ -18,10 +18,10 @@ public class UserDetails {
 
     @NotNull
     @Length(min = 1, max = 32)
-    private String firstname;
+    private String habitName;
     @NotNull
     @Length(min = 1, max = 32)
-    private String lastname;
+    private String habitDescription;
 
     @NotNull
     @Length(min = 4, max = 64)
@@ -47,20 +47,20 @@ public class UserDetails {
         this.id = id;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String gethabitName() {
+        return habitName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void sethabitName(String habitName) {
+        this.habitName = habitName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String gethabitDescription() {
+        return habitDescription;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void sethabitDescription(String habitDescription) {
+        this.habitDescription = habitDescription;
     }
 
     public String getHandle() {

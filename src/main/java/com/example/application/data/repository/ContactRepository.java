@@ -10,7 +10,7 @@ import java.util.List;
 public interface ContactRepository extends JpaRepository<Contact, Long> {
 
     @Query("select c from Contact c " +
-            "where lower(c.firstName) like lower(concat('%', :searchTerm, '%')) " +
-            "or lower(c.lastName) like lower(concat('%', :searchTerm, '%'))")
+            "where lower(c.habitName) like lower(concat('%', :searchTerm, '%')) " +
+            "or lower(c.habitDescription) like lower(concat('%', :searchTerm, '%'))")
     List<Contact> search(@Param("searchTerm") String searchTerm);
 }

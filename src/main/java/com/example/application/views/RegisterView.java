@@ -69,8 +69,8 @@ public class RegisterView extends VerticalLayout {
 		setJustifyContentMode(JustifyContentMode.CENTER);
         H2 title = new H2("Signup form");
 
-        TextField firstnameField = new TextField("First name");
-        TextField lastnameField = new TextField("Last name");
+        TextField habitNameField = new TextField("First name");
+        TextField habitDescriptionField = new TextField("Last name");
         TextField handleField = new TextField("User handle");
 
         // This is a custom field we create to handle the field 'avatar' in our data. It
@@ -99,7 +99,7 @@ public class RegisterView extends VerticalLayout {
         // Create a FormLayout with all our components. The FormLayout doesn't have any
         // logic (validation, etc.), but it allows us to configure Responsiveness from
         // Java code and its defaults looks nicer than just using a VerticalLayout.
-        FormLayout formLayout = new FormLayout(title, firstnameField, lastnameField, handleField, passwordField1, passwordField2,
+        FormLayout formLayout = new FormLayout(title, habitNameField, habitDescriptionField, handleField, passwordField1, passwordField2,
                 allowMarketingBox, emailField, errorMessage, submitButton);
 
         // Restrict maximum width and center on page
@@ -142,8 +142,8 @@ public class RegisterView extends VerticalLayout {
         binder = new BeanValidationBinder<UserDetails>(UserDetails.class);
 
         // Basic name fields that are required to fill in
-        binder.forField(firstnameField).asRequired().bind("firstname");
-        binder.forField(lastnameField).asRequired().bind("lastname");
+        binder.forField(habitNameField).asRequired().bind("habitName");
+        binder.forField(habitDescriptionField).asRequired().bind("habitDescription");
 
         // The handle has a custom validator, in addition to being required. Some values
         // are not allowed, such as 'admin'; this is checked in the validator.

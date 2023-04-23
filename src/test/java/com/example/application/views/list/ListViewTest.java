@@ -32,7 +32,7 @@ public class ListViewTest {
         assertFalse(form.isVisible());
         grid.asSingleSelect().setValue(firstContact);
         assertTrue(form.isVisible());
-        assertEquals(firstContact.getFirstName(), form.firstName.getValue());
+        assertEquals(firstContact.gethabitName(), form.habitName.getValue());
     }
 
     private Contact getFirstItem(Grid<Contact> grid) {

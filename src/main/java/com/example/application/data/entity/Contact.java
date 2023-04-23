@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
@@ -12,10 +11,10 @@ import jakarta.validation.constraints.NotNull;
 public class Contact extends AbstractEntity {
 
     @NotEmpty
-    private String firstName = "";
+    private String habitName = "";
 
     @NotEmpty
-    private String lastName = "";
+    private String habitDescription = "";
 
     @ManyToOne
     @JoinColumn(name = "company_id")
@@ -33,23 +32,23 @@ public class Contact extends AbstractEntity {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName;
+        return habitName + " " + habitDescription;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String gethabitName() {
+        return habitName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void sethabitName(String habitName) {
+        this.habitName = habitName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String gethabitDescription() {
+        return habitDescription;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void sethabitDescription(String habitDescription) {
+        this.habitDescription = habitDescription;
     }
 
     public Company getCompany() {

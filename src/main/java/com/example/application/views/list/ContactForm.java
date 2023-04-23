@@ -21,13 +21,13 @@ import com.vaadin.flow.shared.Registration;
 import java.util.List;
 
 public class ContactForm extends FormLayout { 
-  TextField firstName = new TextField("Habit Name"); 
-  TextField lastName = new TextField("Description");
+  TextField habitName = new TextField("Habit Name"); 
+  TextField habitDescription = new TextField("Description");
   TextField email = new TextField("Date Complete By D/M/Y");
   ComboBox<Status> status = new ComboBox<>("Importance");
   ComboBox<Company> company = new ComboBox<>("Domains");
 
-  Button save = new Button("Save");
+  Button save = new Button("Save"); 
   Button delete = new Button("Delete");
   Button close = new Button("Cancel");
   // Other fields omitted
@@ -42,8 +42,8 @@ public class ContactForm extends FormLayout {
     status.setItems(statuses);
     status.setItemLabelGenerator(Status::getName);
 
-    add(firstName, 
-        lastName,
+    add(habitName, 
+        habitDescription,
         email,
         company,
         status,
