@@ -1,0 +1,17 @@
+{
+  "productionMode": false,
+  "eagerServerLoad": false,
+  "npmFolder": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main",
+  "node.version": "v18.14.1",
+  "node.download.root": "https://nodejs.org/dist/",
+  "generatedFolder": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main\\target\\frontend",
+  "frontendFolder": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main\\frontend",
+  "connect.javaSourceFolder": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main\\src\\main\\java",
+  "javaResourceFolder": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main\\src\\main\\resources",
+  "connect.applicationProperties": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main\\src\\main\\resources\\application.properties",
+  "connect.openApiFile": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main\\target\\generated-resources\\openapi.json",
+  "project.frontend.generated": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main\\frontend\\generated",
+  "pnpm.enable": false,
+  "require.home.node": false,
+  "build.folder": "target"
+}

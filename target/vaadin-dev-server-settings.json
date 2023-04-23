@@ -1,0 +1,18 @@
+{
+  "frontendFolder": "C:/Users/zacha/Downloads/Habit-Tracker-main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "C:/Users/zacha/Downloads/Habit-Tracker-main/frontend/generated/jar-resources",
+  "staticOutput": "C:/Users/zacha/Downloads/Habit-Tracker-main/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main\\target\\classes\\META-INF\\VAADIN\\config",
+  "frontendBundleOutput": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "devBundleOutput": "C:/Users/zacha/Downloads/Habit-Tracker-main/src/main/dev-bundle/webapp",
+  "devBundleStatsOutput": "C:/Users/zacha/Downloads/Habit-Tracker-main/src/main/dev-bundle/config",
+  "jarResourcesFolder": "C:/Users/zacha/Downloads/Habit-Tracker-main/frontend/generated/jar-resources",
+  "generatedFlowImportsFolder": "target/frontend",
+  "themeName": "flowcrmtutorial",
+  "clientServiceWorkerSource": "C:\\Users\\zacha\\Downloads\\Habit-Tracker-main\\target\\sw.ts",
+  "pwaEnabled": true,
+  "offlineEnabled": true,
+  "offlinePath": "'offline.html'"
+}
