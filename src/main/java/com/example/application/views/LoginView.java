@@ -15,6 +15,10 @@ import com.vaadin.flow.server.auth.AnonymousAllowed;
 @AnonymousAllowed
 public class LoginView extends VerticalLayout implements BeforeEnterObserver {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private final LoginForm login = new LoginForm(); 
 
 	public LoginView(){

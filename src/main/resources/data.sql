@@ -9,7 +9,7 @@ INSERT INTO "COMPANY" VALUES
 (7, 1, 'Productivity'),
 (8, 1, 'Finances'),
 (9, 1, 'Learning and Education'),
-(10, 1, 'Relationships');   
+(10, 1, 'Other');  
 INSERT INTO "CONTACT" VALUES
 (11, 1, '', 'Spend less time worrying', 'Worry-reduction', 6, 1),
 (12, 1, '', 'Practice time management', 'Time-management', 8, 5),

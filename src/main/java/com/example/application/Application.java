@@ -23,7 +23,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 )
 public class Application implements AppShellConfigurator {
 
-    public static void main(String[] args) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
 

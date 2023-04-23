@@ -95,7 +95,7 @@ public class HabitsList extends VerticalLayout {
 		grid.setSizeFull();
 		grid.setColumns("habitName", "habitDescription", "habitDate");
 		grid.addColumn(contact -> contact.getStatus().getName()).setHeader("Importance");
-		grid.addColumn(contact -> contact.getCompany().getName()).setHeader("Domain");
+		grid.addColumn(contact -> contact.getCompany().getName()).setHeader("Category");
 		grid.getColumns().forEach(col -> col.setAutoWidth(true));
 
 		grid.asSingleSelect().addValueChangeListener(event -> editContact(event.getValue()));

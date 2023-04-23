@@ -3,7 +3,6 @@ package com.example.application.views.list;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import com.example.application.data.entity.Contact;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.data.provider.ListDataProvider;
@@ -14,28 +13,28 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ListViewTest {
 
-    static {
-        // Prevent Vaadin Development mode to launch browser window
-        System.setProperty("vaadin.launch-browser", "false");
-    }
+	static {
+		// Prevent Vaadin Development mode to launch browser window
+		System.setProperty("vaadin.launch-browser", "false");
+	}
 
-    @Autowired
-    private ListView listView;
+	@Autowired
+	private HabitsList listView;
 
-    @Test
-    public void formShownWhenContactSelected() {
-        Grid<Contact> grid = listView.grid;
-        Contact firstContact = getFirstItem(grid);
+	@Test
+	public void formShownWhenContactSelected() {
+		Grid<Contact> grid = listView.grid;
+		Contact firstContact = getFirstItem(grid);
 
-        ContactForm form = listView.form;
+		ContactForm form = listView.form;
 
-        assertFalse(form.isVisible());
-        grid.asSingleSelect().setValue(firstContact);
-        assertTrue(form.isVisible());
-        assertEquals(firstContact.gethabitName(), form.habitName.getValue());
-    }
+		assertFalse(form.isVisible());
+		grid.asSingleSelect().setValue(firstContact);
+		assertTrue(form.isVisible());
+		assertEquals(firstContact.gethabitName(), form.habitName.getValue());
+	}
 
-    private Contact getFirstItem(Grid<Contact> grid) {
-        return( (ListDataProvider<Contact>) grid.getDataProvider()).getItems().iterator().next();
-    }
+	private Contact getFirstItem(Grid<Contact> grid) {
+		return ((ListDataProvider<Contact>) grid.getDataProvider()).getItems().iterator().next();
+	}
 }
