@@ -1,15 +1,15 @@
 INSERT INTO "STATUS" VALUES
-(1, 1, 'Imported lead'),
-(2, 1, 'Not contacted'),
-(3, 1, 'Contacted'),
-(4, 1, 'Customer'),
-(5, 1, 'Closed (lost)');
+(1, 1, 'Critical'),
+(2, 1, 'High'),
+(3, 1, 'Medium'),
+(4, 1, 'Low'),
+(5, 1, 'Trivial');
 INSERT INTO "COMPANY" VALUES
-(6, 1, 'Phillips Van Heusen Corp.'),
-(7, 1, 'Avaya Inc.'),
-(8, 1, 'Laboratory Corporation of America Holdings'),
-(9, 1, 'AutoZone, Inc.'),
-(10, 1, 'Linens ''n Things Inc.');   
+(6, 1, 'Health and Fitness'),
+(7, 1, 'Productivity'),
+(8, 1, 'Finances'),
+(9, 1, 'Learning and Education'),
+(10, 1, 'Relationships');   
 INSERT INTO "CONTACT" VALUES
 (11, 1, 'eula.lane@jigrormo.ye', 'Eula', 'Lane', 8, 1),
 (12, 1, 'barry.rodriquez@zun.mm', 'Barry', 'Rodriquez', 7, 5),
