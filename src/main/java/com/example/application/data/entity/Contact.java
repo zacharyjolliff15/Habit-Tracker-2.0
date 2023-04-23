@@ -28,7 +28,7 @@ public class Contact extends AbstractEntity {
 
   
     @NotEmpty
-    private String email = "";
+    private String habitDate = "";
 
     @Override
     public String toString() {
@@ -67,11 +67,11 @@ public class Contact extends AbstractEntity {
         this.status = status;
     }
 
-    public String getEmail() {
-        return email;
+    public String gethabitDate() {
+        return habitDate;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void sethabitDate(String habitDate) {
+        this.habitDate = habitDate;
     }
 }

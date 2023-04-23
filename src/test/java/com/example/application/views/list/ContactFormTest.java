@@ -41,7 +41,7 @@ public class ContactFormTest {
         marcUsher = new Contact();
         marcUsher.sethabitName("Marc");
         marcUsher.sethabitDescription("Usher");
-        marcUsher.setEmail("marc@usher.com");
+        marcUsher.sethabitDate("marc@usher.com");
         marcUsher.setStatus(status1);
         marcUsher.setCompany(company2);
     }
@@ -52,7 +52,7 @@ public class ContactFormTest {
         form.setContact(marcUsher);
         assertEquals("Marc", form.habitName.getValue());
         assertEquals("Usher", form.habitDescription.getValue());
-        assertEquals("marc@usher.com", form.email.getValue());
+        assertEquals("marc@usher.com", form.habitDate.getValue());
         assertEquals(company2, form.company.getValue());
         assertEquals(status1, form.status.getValue());
     }
@@ -65,7 +65,7 @@ public class ContactFormTest {
         form.habitName.setValue("John");
         form.habitDescription.setValue("Doe");
         form.company.setValue(company1);
-        form.email.setValue("john@doe.com");
+        form.habitDate.setValue("john@doe.com");
         form.status.setValue(status2);
 
         AtomicReference<Contact> savedContactRef = new AtomicReference<>(null);
@@ -77,7 +77,7 @@ public class ContactFormTest {
 
         assertEquals("John", savedContact.gethabitName());
         assertEquals("Doe", savedContact.gethabitDescription());
-        assertEquals("john@doe.com", savedContact.getEmail());
+        assertEquals("john@doe.com", savedContact.gethabitDate());
         assertEquals(company1, savedContact.getCompany());
         assertEquals(status2, savedContact.getStatus());
     }

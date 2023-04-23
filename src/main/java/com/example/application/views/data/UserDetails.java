@@ -30,7 +30,7 @@ public class UserDetails {
     private AvatarImage avatar;
 
    
-    private String email;
+    private String habitDate;
 
     // FIXME Passwords should never be stored in plain text!
     @NotNull
@@ -79,12 +79,12 @@ public class UserDetails {
         this.avatar = avatar;
     }
 
-    public String getEmail() {
-        return email;
+    public String gethabitDate() {
+        return habitDate;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void sethabitDate(String habitDate) {
+        this.habitDate = habitDate;
     }
 
     public String getPassword() {

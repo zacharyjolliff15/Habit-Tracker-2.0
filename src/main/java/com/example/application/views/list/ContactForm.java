@@ -23,7 +23,7 @@ import java.util.List;
 public class ContactForm extends FormLayout { 
   TextField habitName = new TextField("Habit Name"); 
   TextField habitDescription = new TextField("Description");
-  TextField email = new TextField("Date Complete By D/M/Y");
+  TextField habitDate = new TextField("Date Complete By D/M/Y");
   ComboBox<Status> status = new ComboBox<>("Importance");
   ComboBox<Company> company = new ComboBox<>("Domains");
 
@@ -44,7 +44,7 @@ public class ContactForm extends FormLayout {
 
     add(habitName, 
         habitDescription,
-        email,
+        habitDate,
         company,
         status,
         createButtonsLayout());
