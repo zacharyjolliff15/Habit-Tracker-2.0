@@ -28,6 +28,15 @@ public class UserDetails {
     private String handle;
 
     private AvatarImage avatar;
+    
+    private String email;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
    
     private String habitDate;
