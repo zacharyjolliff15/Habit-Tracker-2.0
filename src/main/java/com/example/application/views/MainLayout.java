@@ -45,9 +45,9 @@ public class MainLayout extends AppLayout {
 
     private void createDrawer() { //where the list will be
         addToDrawer(new VerticalLayout(
-                new RouterLink("List", ListView.class),
-                new RouterLink("Dashboard", DashboardView.class),
-                new RouterLink("Habit Tracker", HabitTracker.class)
+                new RouterLink("List of Habits", ListView.class),
+                new RouterLink("Motivation", DashboardView.class),
+                new RouterLink("", HabitTracker.class) //TODO  add "anything" and the broken habit tracker will be added
                 
                 
         ));
