@@ -1,7 +1,7 @@
 package com.example.application.views;
 
 import com.example.application.security.SecurityService;
-import com.example.application.views.list.ListView;
+import com.example.application.views.list.HabitsList;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.button.Button;
@@ -13,43 +13,47 @@ import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 
 public class MainLayout extends AppLayout {
-    private final SecurityService securityService;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final SecurityService securityService;
 
-    public MainLayout(SecurityService securityService) {
-        this.securityService = securityService;
-        createHeader();
-        createDrawer();
-    }
+	public MainLayout(SecurityService securityService) {
+		this.securityService = securityService;
+		createHeader();
+		createDrawer();
+	}
 
-    private void createHeader() {
-        H1 logo = new H1("Habit Tracker");
-        logo.addClassNames(
-            LumoUtility.FontSize.LARGE,
-            LumoUtility.Margin.MEDIUM);
+	private void createHeader() {
+		H1 logo = new H1("Habit Tracker");
+		logo.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.MEDIUM);
 
-        String u = securityService.getAuthenticatedUser().getUsername();
-        Button logout = new Button("Log out " + u, e -> securityService.logout()); // <2>
+		String u = securityService.getAuthenticatedUser().getUsername();
+		Button logout = new Button("Log out " + u, e -> securityService.logout()); // <2>
 
-        var header = new HorizontalLayout(new DrawerToggle(), logo, logout);
+		var header = new HorizontalLayout(new DrawerToggle(), logo, logout);
 
-        header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
-        header.expand(logo); // <4>
-        header.setWidthFull();
-        header.addClassNames(
-            LumoUtility.Padding.Vertical.NONE,
-            LumoUtility.Padding.Horizontal.MEDIUM);
+		header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
+		header.expand(logo); // <4>
+		header.setWidthFull();
+		header.addClassNames(LumoUtility.Padding.Vertical.NONE, LumoUtility.Padding.Horizontal.MEDIUM);
 
-        addToNavbar(header); 
+		addToNavbar(header);
 
-    }
+	}
 
-    private void createDrawer() { //where the list will be
-        addToDrawer(new VerticalLayout(
-                new RouterLink("List of Habits", ListView.class),
-                new RouterLink("Motivation", DashboardView.class),
-                new RouterLink("", HabitTracker.class) //TODO  add "anything" and the broken habit tracker will be added
-                
-                
-        ));
-    }
+	private void createDrawer() { // where the list will be
+		addToDrawer(new VerticalLayout(new RouterLink("Habits List", HabitsList.class),
+				new RouterLink("Motivation", Motivation.class), new RouterLink("", HabitTracker.class) // TODO add
+																										// "anything"
+																										// and the
+																										// broken
+																										// habit
+																										// tracker
+																										// will be
+																										// added
+
+		));
+	}
 }
