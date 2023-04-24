@@ -13,9 +13,6 @@ import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 
 public class MainLayout extends AppLayout {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private final SecurityService securityService;
 
@@ -38,22 +35,15 @@ public class MainLayout extends AppLayout {
 		header.expand(logo); // <4>
 		header.setWidthFull();
 		header.addClassNames(LumoUtility.Padding.Vertical.NONE, LumoUtility.Padding.Horizontal.MEDIUM);
-
 		addToNavbar(header);
-
 	}
 
-	private void createDrawer() { // where the list will be
-		addToDrawer(new VerticalLayout(new RouterLink("Habits List", HabitsList.class),
-				new RouterLink("Motivation", Motivation.class), new RouterLink("", HabitTracker.class) // TODO add
-																										// "anything"
-																										// and the
-																										// broken
-																										// habit
-																										// tracker
-																										// will be
-																										// added
-
-		));
+	private void createDrawer() {
+	    addToDrawer(new VerticalLayout(
+	        new RouterLink("Habits List", HabitsList.class),
+	        new RouterLink("Motivation", Motivation.class),
+	        new RouterLink("Reports", Reports.class),
+	        new RouterLink("", HabitTracker.class)
+	    ));
 	}
 }

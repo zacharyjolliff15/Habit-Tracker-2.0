@@ -4,11 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 // import org.vaadin.examples.form.*;
 // import org.vaadin.examples.form.ui.components.AvatarField;
 // import org.vaadin.examples.form.ui
-
 import com.example.application.views.data.UserDetails;
 import com.example.application.views.data.UserDetailsService;
 import com.vaadin.flow.component.UI;
-import com.vaadin.flow.component.avatar.Avatar;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.checkbox.Checkbox;
@@ -40,8 +38,11 @@ import com.vaadin.flow.server.auth.AnonymousAllowed;
 @AnonymousAllowed
 @Route("Register")
 public class RegisterView extends VerticalLayout {
-
-    private Checkbox allowMarketingBox;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Checkbox allowMarketingBox;
     private PasswordField passwordField1;
     private PasswordField passwordField2;
 
@@ -297,7 +298,12 @@ public class RegisterView extends VerticalLayout {
      */
     public class VisibilityEmailValidator extends EmailValidator {
 
-        public VisibilityEmailValidator(String errorMessage) {
+        /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public VisibilityEmailValidator(String errorMessage) {
             super(errorMessage);
         }
 
